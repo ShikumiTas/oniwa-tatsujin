@@ -1,0 +1,28 @@
+@startuml yonde
+
+entity "questions (質問)" as questions {
+    + id [PK]
+    ---
+    # question_id: bigint [FK]
+    * title: string
+    * body: text
+    note: text
+    * selectable_answers: integer
+    validation: json
+}
+
+entity "answers (回答)" as answers {
+    + id [PK]
+    ---
+    # question_id: bigint [FK]
+    * name: string
+    image: binary
+    extra_field: text
+    # add_question_id: bigint [FK]
+}
+
+answers }|-- questions
+questions |o-- questions
+questions |o-- answers
+
+@enduml
