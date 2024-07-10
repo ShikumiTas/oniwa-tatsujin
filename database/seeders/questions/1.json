@@ -1,0 +1,210 @@
+[
+    {
+        "question": {
+            "title": "刈込剪定する植栽の種類をお教えください。",
+            "body": "刈込剪定する植栽の種類をお教えください。",
+            "selectable_answers": 2,
+            "validation": {
+                "rules": {
+                    "required": true,
+                    "minlength": 1
+                },
+                "messages": {
+                    "required": "選択必須です",
+                    "minlength": "最低{0}つは選択してください"
+                }
+            }
+        },
+        "answers": [
+            {
+                "name": "生垣（垣根）",
+                "add_question": [
+                    {
+                        "question": {
+                            "title": "木の高さ",
+                            "body": "木の高さ",
+                            "selectable_answers": 1,
+                            "validation": {
+                                "rules": {
+                                    "required": true
+                                },
+                                "messages": {
+                                    "required": "選択必須です"
+                                }
+                            }
+                        },
+                        "answers": [
+                            {
+                                "name": "高さ１ｍ以下"
+                            },
+                            {
+                                "name": "高さ１ｍ～２ｍ"
+                            },
+                            {
+                                "name": "高さ２ｍ～３ｍ"
+                            },
+                            {
+                                "name": "高さ３ｍ以上"
+                            }
+                        ]
+                    },
+                    {
+                        "question": {
+                            "title": "距離（延長）",
+                            "body": "距離（延長）",
+                            "selectable_answers": 1,
+                            "validation": {
+                                "rules": {
+                                    "required": true
+                                },
+                                "messages": {
+                                    "required": "選択必須です"
+                                }
+                            }
+                        },
+                        "answers": [
+                            {
+                                "name": "20ｍ未満"
+                            },
+                            {
+                                "name": "20ｍ～40ｍ未満"
+                            },
+                            {
+                                "name": "40ｍ～60ｍ未満"
+                            },
+                            {
+                                "name": "60ｍ～80ｍ未満"
+                            },
+                            {
+                                "name": "80ｍ～100ｍ未満"
+                            },
+                            {
+                                "name": "100ｍ以上"
+                            }
+                        ]
+                    },
+                    {
+                        "question": {
+                            "title": "作業で発生する枝葉の処分も希望しますか？",
+                            "body": "作業で発生する枝葉の処分も希望しますか？",
+                            "selectable_answers": 1,
+                            "validation": {
+                                "rules": {
+                                    "required": true
+                                },
+                                "messages": {
+                                    "required": "選択必須です"
+                                }
+                            }
+                        },
+                        "answers": [
+                            {
+                                "name": "はい"
+                            },
+                            {
+                                "name": "いいえ"
+                            },
+                            {
+                                "name": "その他",
+                                "extra_field": "<input size=\"100\" type=\"text\" />"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "植込み・花壇植栽",
+                "add_question": [
+                    {
+                        "question": {
+                            "title": "木の高さ",
+                            "body": "木の高さ",
+                            "selectable_answers": 1,
+                            "validation": {
+                                "rules": {
+                                    "required": true
+                                },
+                                "messages": {
+                                    "required": "選択必須です"
+                                }
+                            }
+                        },
+                        "answers": [
+                            {
+                                "name": "高さ１ｍ以下"
+                            },
+                            {
+                                "name": "高さ１ｍ～２ｍ"
+                            },
+                            {
+                                "name": "高さ２ｍ以上"
+                            }
+                        ]
+                    },
+                    {
+                        "question": {
+                            "title": "面積",
+                            "body": "面積",
+                            "selectable_answers": 1,
+                            "validation": {
+                                "rules": {
+                                    "required": true
+                                },
+                                "messages": {
+                                    "required": "選択必須です"
+                                }
+                            }
+                        },
+                        "answers": [
+                            {
+                                "name": "20㎡未満"
+                            },
+                            {
+                                "name": "20㎡～40㎡未満"
+                            },
+                            {
+                                "name": "40㎡～60㎡未満"
+                            },
+                            {
+                                "name": "60㎡～80㎡未満"
+                            },
+                            {
+                                "name": "80㎡～100㎡未満"
+                            },
+                            {
+                                "name": "100㎡以上"
+                            }
+                        ]
+                    },
+                    {
+                        "question": {
+                            "title": "作業で発生する枝葉の処分も希望しますか？",
+                            "body": "作業で発生する枝葉の処分も希望しますか？",
+                            "selectable_answers": 1,
+                            "validation": {
+                                "rules": {
+                                    "required": true
+                                },
+                                "messages": {
+                                    "required": "選択必須です"
+                                }
+                            }
+                        },
+                        "answers": [
+                            {
+                                "name": "はい"
+                            },
+                            {
+                                "name": "いいえ"
+                            },
+                            {
+                                "name": "その他",
+                                "extra_field": "<input size=\"100\" type=\"text\" />"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
