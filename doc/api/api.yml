@@ -1,0 +1,117 @@
+openapi: '3.0.2'
+info:
+  title: WebAPI仕様
+  version: '2.0.0'
+
+servers:
+  - url: 'http://localhost/api'
+tags:
+  - name: questions
+    description: シミュレーションの質問に関する内容
+
+paths:
+  /questions/{questionId}:
+    parameters:
+      - name: questionId
+        in: path
+        schema:
+          type: integer
+        required: true
+        description: Questionテーブルのid
+        example: 2
+    get:
+      summary: 質問群取得
+      tags:
+        - questions
+      operationId: questionDetailGet
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Question'
+
+components:
+  schemas:
+    Question:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: 質問のid
+          example: 2
+        title:
+          type: string
+          description: 質問のタイトル ※ 使わないかも
+          example: 木の高さ
+        body:
+          type: string
+          description: 質問の本文
+          example: 木の高さを選択してください。
+        note:
+          type: string
+          description: 備考
+          example: '備考備考備考備考'
+        selectable_answers:
+          type: integer
+          description: 選択可能な回答の数
+          default: 1
+          example: 1
+        validation:
+          type: string
+          format: json
+          description: jQuery Validation でフォームを制御するためのJSON
+        prev_question_id:
+          type: integer
+          description: 今の質問の前の質問のid
+          example: 1
+        next_question_id:
+          type: integer
+          description: 今の質問の次の質問のid
+          example: 3
+        answers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Answer'
+      required:
+        - id
+        - title
+        - body
+        - selectable_answers
+        - validation
+        - answers
+
+    Answer:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: 回答のid
+          example: 1
+        question_id:
+          type: integer
+          description: 回答の親の質問のid
+          example: 2
+        name:
+          type: string
+          description: 回答名
+          example: 100ｍ以上
+        image:
+          type: string
+          format: binary
+          description: 回答に画像を載せたい場合は画像のバイナリデータ
+        extra_field:
+          type: string
+          description: テキストフィールドなど、HTMLを追加したい場合に使用
+          example: <input size="100" type="text" />
+        add_question_id:
+          type: integer
+          description: 回答を選択したことにより、追加の質問をするためのid
+          example: '4'
+      required:
+        - id
+        - question_id
+        - name
