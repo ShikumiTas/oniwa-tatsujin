@@ -10,6 +10,8 @@ class Answer extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['question_id', 'name', 'add_question_id'];
+
     /**
      * 回答の親である質問を取得する
      */

@@ -170,7 +170,7 @@
 
         initWizard();
 
-        getQuestionsById(2, (questions) => {
+        getQuestionsById(4, (questions) => {
             addContents(questions)
         });
     });

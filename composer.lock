@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c133b312fe180afc0f2b635022ad80ac",
+    "content-hash": "8891abf52d9baa0d85e58b8564cb80ba",
     "packages": [
         {
             "name": "brick/math",
@@ -3187,6 +3187,63 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "robclancy/presenter",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robclancy/presenter.git",
+                "reference": "9eae87c0ff075673d358fdc4f44a845f66e65db5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robclancy/presenter/zipball/9eae87c0ff075673d358fdc4f44a845f66e65db5",
+                "reference": "9eae87c0ff075673d358fdc4f44a845f66e65db5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "illuminate/view": ">=9.0",
+                "mockery/mockery": "~1.3.0",
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Robbo\\Presenter\\PresenterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Robbo\\Presenter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robbo",
+                    "email": "robbo.clancy@gmail.com"
+                }
+            ],
+            "description": "Decorate your objects using presenters. Primarily to keep presentation logic out of your models.",
+            "keywords": [
+                "decorator",
+                "laravel",
+                "presenter"
+            ],
+            "support": {
+                "issues": "https://github.com/robclancy/presenter/issues",
+                "source": "https://github.com/robclancy/presenter/tree/3.0.0"
+            },
+            "time": "2024-02-21T15:46:11+00:00"
         },
         {
             "name": "symfony/clock",
